@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/uploadphoto" enctype="multipart/form-data" method="POST" onSubmit={submitHandler}>
+        <div class="form-group">
+            <label for="exampleInputEmail1"><b>Product Name</b></label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Product Name"  onChange={(e)=>{productNameHandler(e)}}/>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1"><b>Product Image</b></label>
+            <input type="file" name="myImage" class="form-control" id="exampleInputPassword1" placeholder="Upload Image" onChange={(e)=>{productImageHandler(e)}}/>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1"><b>Product Description</b></label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Product Name"  onChange={(e)=>{DescriptionHandler(e)}}/>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1"><b>Product Quantity</b></label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Product Name"  onChange={(e)=>{QuantityHandler(e)}}/>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputEmail1"><b>Product Unit Price</b></label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Product Name"  onChange={(e)=>{unitPriceHandler(e)}}/>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</body>
+</html>
